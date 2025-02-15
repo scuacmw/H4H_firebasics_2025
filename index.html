@@ -13,13 +13,8 @@
     <!-- project credentials (edit in your .env file) -->
     <script>
         $(document).ready(function(){
-            var firebaseConfig = {
-                apiKey: process.env.API_KEY,
-                authDomain: process.env.AUTH_DOMAIN,
-                projectId: process.env.PROJECT_ID,
-                storageBucket: process.env.STORAGE_BUCKET,
-                messagingSenderId: process.env.MESSAGING_SENDER_ID,
-                appId: process.env.APP_ID
+            const firebaseConfig = {
+                // copy paste firebase credentials here
             };
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
@@ -93,9 +88,10 @@
 
 </head>
 <body>
-    <form id="new-task-form">
+    <form class="new-task-form">
         <input placeholder="Enter Task Name here..." required class="new-task" type="text">
         <button type="submit">Create Task</button>
+    </form>
     <ol id="todos"></ol>
     
 </body>
